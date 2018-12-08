@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "436663282806",
+    "firebase_url": "https://lazada-c494a.firebaseio.com",
+    "project_id": "lazada-c494a",
+    "storage_bucket": "lazada-c494a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436663282806:android:44151c6c78a739aa",
+        "android_client_info": {
+          "package_name": "com.dung.lazada"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436663282806-1cnbet0tin11e5r4g42ams4fgbt3vth3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCef0GkqBVJ29TE5f_5CyWotHqijwHg5rM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
