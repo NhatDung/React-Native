@@ -17,7 +17,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <SafeAreaView style={{ flex: 1 }}>
-          <SwitchNavigator ref={navigatorRef => {
+          <TabNavigator ref={navigatorRef => {
             NavigationService.setTopLevelNavigator(navigatorRef);
           }} />
         </SafeAreaView>
