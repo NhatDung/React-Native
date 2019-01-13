@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, AsyncStorage } from 'react-native';
+import { View, Image } from 'react-native';
 import Star from '../../../components/Star';
 import { Container, Content, Card, CardItem, Text, Button, Icon, Left, Body, Right } from 'native-base';
 import { connect } from 'react-redux';
@@ -15,7 +15,6 @@ class ProductDetailComponent extends Component {
     componentDidMount() {
         var id = this.props.navigation.state.params.id;
         this.props.getProduct(id);
-        // const product = this.props.product
     }
     render() {
         return (

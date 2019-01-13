@@ -45,6 +45,18 @@ function* REMOVEFROMCART(action) {
     } catch (e) {
     }
 };
+
+function* ORDER(action) {
+    try {
+        yield put({
+            type: ActionTypes.ORDER_SUCCESS,
+            id: action.id
+            // Gui tham so qua reducer de xu ly tiep
+
+        });
+    } catch (e) {
+    }
+};
 function* ProductsSagas() {
     yield takeEvery(ActionTypes.PRODUCTS, PRODUCTS);
     yield takeEvery(ActionTypes.PRODUCT, PRODUCT);

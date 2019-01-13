@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Content, SwipeRow, View, Text, Icon, Button } from 'native-base';
-import { FlatList } from 'react-native';
+import { FlatList, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { removeFromCart } from '../actions'
 
@@ -10,7 +10,6 @@ class BuyListComponent extends Component {
         this.state = {
         }
     }
-
     render() {
         return (
             <Container>
@@ -21,10 +20,12 @@ class BuyListComponent extends Component {
                         renderItem={({ item }) => <SwipeRow
                             rightOpenValue={-75}
                             body={
-                                <View>
+                                < View >
                                     <Text style={{ paddingLeft: 15 }}>{item.product.name}</Text>
-                                    <Text style={{ paddingLeft: 15 }}>{item.product.quantity}</Text>
+                                    <Text style={{ paddingLeft: 15 }}>Quantity: {item.quantity}</Text>
+
                                 </View>
+
                             }
                             right={
                                 <Button danger onPress={() => { this.props.removeFromCart(item.product._id) }}>
@@ -33,6 +34,15 @@ class BuyListComponent extends Component {
                             }
                         />}
                     />
+                    <View style={{ height: 40, width: 150, backgroundColor: 'red', justifyContent: 'center', }}>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', }}>Total: {this.props.total}</Text>
+                    </View>
+                    <TouchableOpacity style={{ height: 40, width: 80, backgroundColor: 'blue' }}>
+                        <Text>
+                            Order Now
+                        </Text>
+
+                    </TouchableOpacity>
                 </Content>
             </Container>
         );
@@ -41,6 +51,9 @@ class BuyListComponent extends Component {
 const mapStateToProps = (state) => {
     return ({
         cartItems: state.productsReducer.cartItems,
+        total: state.productsReducer.total,
+        user: state.loginReducer.user
+
     })
 };
 // Nối các functions vào props (functions) của View Component

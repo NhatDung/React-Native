@@ -52,7 +52,7 @@ function* REGISTER(action) {
         }
 
     } catch (e) {
-        yield put({ type: ActionTypes.REGISTER_ERROR, message: 'Login failed' });
+        yield put({ type: ActionTypes.REGISTER_ERROR, message: 'Register failed' });
     }
 }
 

@@ -7,8 +7,9 @@ const defautState = {
     cartItems: [],
     total: 0,
 };
-updateTotal = (items) => { (total, item) => ((total + ((item.product.price * item.quantity) * (100 - item.product.discount) / 100)), 0) }
-
+updateTotal = (items) => {
+    return items.reduce((total, item) => (total + ((item.product.price * item.quantity) * (100 - item.product.discount) / 100)), 0);
+}
 const productsReducer = (state = defautState, action) => {
     switch (action.type) {
         //PRODUCTS
